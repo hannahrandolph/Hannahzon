@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hannahzon</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <script src="https://js.stripe.com/v3"></script>
+  </head>
+
+  <header>
+
+
+  <% if current_user%>
+ <h5> Hello, <%=current_user.fname%>!      
+ <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-light rounded-pill border-secondary col" %>
+</h5> 
+
+<% else %>
+ <p> You are not signed in.</p>
+ <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-light rounded-pill border-secondary col"%>
+ <%= link_to "Login", new_user_session_path, class: "btn btn-light rounded-pill border-secondary col" %>
+<% end %>
+  <%= render 'layouts/navbar' %>
+<br><br>
+
+   
+</header>
+
+  <body>
+
+    <%= yield %>
+  </body>
+</html>

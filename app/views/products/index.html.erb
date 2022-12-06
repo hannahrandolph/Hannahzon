@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class = "center">Products</h1><br>
+
+<div class="d-flex justify-content-between">
+ <% @products.each_slice(2) do |product| %>
+<div class="container-sm">
+  <div class="row">
+ 
+ <div class = "col">
+
+  
+   <%= render product %>
+ </div>
+  </div>
+   </div>
+
+  <% end %>
+</div>
+
+</table>
+

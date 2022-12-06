@@ -1,0 +1,10 @@
+<% @cart.order_items.each do |order_items| %>
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  <li>  <% product = order_items.product%> </li>
+    <div id="<%= "cart-#{product.id}" %>">
+  <li> <%= order_items.quantity %> items</li>
+
+
+</div>
+</ul>
+<% end %>

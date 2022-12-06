@@ -1,0 +1,22 @@
+
+<div id="<%= dom_id product %>">
+     <%= image_tag  "#{product.image}", :class => "style_image" %>
+     <br>
+    <strong>Name:</strong>
+    <%= product.name %><br>
+    <strong>Description:</strong>
+    <%= product.description %><br>
+    <strong>Price: </strong>
+    <%= product.price %><br>
+
+
+    <%= form_with(url: cart_add_path) do |f| %>
+     <%= f.hidden_field :id, value: product.id%>
+     <%= f.number_field :quantity, value: 0, min:1, class: "btn-outline-dark btn-sm btn rounded-pill" %>
+     <%= f.submit "Add to Cart", class: "btn-light btn rounded-pill border-secondary col"%>
+     
+    <%end%>
+    <br><br>
+    
+</div>
+

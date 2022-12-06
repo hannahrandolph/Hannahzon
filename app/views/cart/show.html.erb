@@ -1,0 +1,44 @@
+<div class = "container-md">
+<h1>Your Cart</h1>
+
+
+<% @cart.order_items.each do |order_items| %>
+
+  <% product = order_items.product %>
+           <%= image_tag  "#{product.image}", :class => "style_image" %>
+  <h4><%= product.name %></h4> 
+  <p>Price: <%= product.price%> </p>
+  <p>Quantity: <%= order_items.quantity %> </p>
+  <p>Item Total: $<%= product.price * order_items.quantity %></p></p>
+      <%= form_with(url: cart_add_path) do |f| %>
+
+     <%= f.hidden_field :id, value: product.id%>
+     <%= f.number_field :quantity, value: order_items.quantity, min:0 %>
+     <%= f.submit "Update Cart", url:cart_path, class: "btn btn-light rounded-pill border-secondary col"%>
+    <%end%>
+
+    <%= form_with(url: cart_remove_path) do |f| %>
+     <%= f.hidden_field :id, value: order_items.id%>
+  
+     <%= f.submit "Remove from Cart", class: "btn btn-dark rounded-pill border-secondary col"%>
+    <%end%>
+<% end %>
+<%# <p>Your total is $<%= @cart.total %> </p> 
+<div class = "text-right">
+<%if @cart.total > 35 %>
+      <p> You earned free shipping! </p>
+     <strong> Cart Total: <%= @cart.total%> </strong>
+     <% elsif @cart.total == 0 %>
+     <p class = "text-center">Your cart is empty!</p>
+     <% else %> 
+     <p> Flat rate shipping: $3.99 </p>
+    <h3>Cart Total: $<%= @cart.total + 3.99 %> </h3>
+    <%# <%= form_tag orderitem_path do %>
+  <%# <%= hidden_field_tag :id, value: order_items.id %>
+  <%# <%= submit_tag 'Purchase', class: 'btn btn-primary' %> 
+<%# <% end %>  
+    <%= link_to "Checkout", checkout_path, class:"btn btn-success border-secondary rounded-pill form-control"  %>
+ <% end %>
+ 
+ </div>
+  </div>
