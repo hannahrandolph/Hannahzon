@@ -30,7 +30,7 @@ def show
                   shipping_rate_data: {
                     type: 'fixed_amount',
                     fixed_amount: {amount: 399, currency: 'usd'},
-                    display_name: 'Free shipping',
+                    display_name: 'Super Speedy Shipping',
                     delivery_estimate: {
                       minimum: {unit: 'business_day', value: 5},
                       maximum: {unit: 'business_day', value: 7},
