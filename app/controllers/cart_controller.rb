@@ -13,10 +13,10 @@ class CartController < ApplicationController
     current_order_item = @cart.order_items.find_by(product_id: @product.id)
     if current_order_item && quantity > 0
       current_order_item.update(quantity:)
-
+      redirect_to request.referrer
     elsif quantity <= 0
       current_order_item.destroy
-
+      redirect_to request.referrer
     else
       @cart.order_items.create(product: @product, quantity:)
   end
