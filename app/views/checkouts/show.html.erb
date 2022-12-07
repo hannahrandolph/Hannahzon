@@ -1,7 +1,9 @@
+<div class="text-center">
 <h1> Checkout! </h1>
 <%= render partial: 'pay/stripe/checkout_button', locals: {
   session: @checkout_session,
   title: "Checkout",
-  class: "btn-success btn rounded-pill border-secondary col center"
+  class: "btn btn-success btn rounded-pill border-secondary justify-content-between"
 } 
 %>
+</div>

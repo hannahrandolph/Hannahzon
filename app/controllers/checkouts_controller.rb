@@ -24,12 +24,25 @@ def show
         .payment_processor
         .checkout(
             mode: 'payment',
+            allow_promotion_codes: true,
+              shipping_options: [
+                {
+                  shipping_rate_data: {
+                    type: 'fixed_amount',
+                    fixed_amount: {amount: 399, currency: 'usd'},
+                    display_name: 'Free shipping',
+                    delivery_estimate: {
+                      minimum: {unit: 'business_day', value: 5},
+                      maximum: {unit: 'business_day', value: 7},
+                    },
+                  },
+                },
+            ],
             line_items: [{
             price:    'price_1MBn9eAYpkAlgOTYqRmmGTxy',
             quantity: 1,
-            adjustable_quantity: {
-                enabled:true,
-            },
+            adjustable_quantity: {enabled:true},
+
         }],
             success_url: checkout_success_url,
         )
@@ -52,15 +65,16 @@ end
 #           })
 # redirect_to session.url, allow_other_host: true
 # end
-# def destroy
-#     @order = OrderItem.find_by(id: params[:id])
-#     @order.destroy!
-# end
+def destroy
+    @order = Product.find_by(id: params[:id])
+    @order.destroy!
+end
 
 def success
-    session[:cart] = []
+   
     @session = Stripe::Checkout::Session.retrieve(params[:session_id])
     @line_items = Stripe::Checkout::Session.list_line_items(params[:session_id]) 
+    session[:order_items] = []
     # OrderItem.find_by(id: params[:id]).destroy
 end
 

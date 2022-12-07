@@ -9,39 +9,39 @@ OrderItem.destroy_all
 Product.destroy_all
 
     Product.create!([{
-        name: "Non-Secular Holiday Tree",
-        description: "Fight away the seasonal depression with this 7 foot tall, glowing beauty",
-        price: 79.99,
-        image: "https://secure.img1-cg.wfcdn.com/im/57410547/resize-h445%5Ecompr-r85/1273/127382134/60%27%27+Lighted+Trees+%26+Branches.jpg",
+        name: "At Home Kegerator",
+        description: "Let your social anxiety win by enjoying a freshly poured beer in the comforts of your own home.",
+        price: 129.99,
+        image: "https://m.media-amazon.com/images/I/61HYSOT-fNL._AC_SX679_.jpg",
     },
     {
         name: "Human-Sized Dog Bed",
-        description: "Have you been jealous of how comfortable your pet looks in their bed?",
+        description: "You'll be taking over your pets bed in no time! Oh, how the tables have turned!",
         price: 104.99,
         image: "https://cdn.shopify.com/s/files/1/0549/1638/2879/products/FunnyFuzzy_SuperLargeLuxurySleepDeeperHumanDogBed6_2760adce-74c4-4618-940e-611f78107054_720x.jpg?v=1668397760"
     },
     {
-        name: "Coffee Mug",
+        name: "Hydration Pack",
+        description: "When you want to be hands free but can't stand the thought of being away from your waterbottle.",
+        price: 54.99,
+        image: "https://www.osprey.com/images/product/hero/skimmerres16_s19_side_sapphireblue.jpg"
+    },        
+    {
+          name: "Coffee Mug",
         description: "Let everyone one know life's got ya down with this strange illustration of a crab smoking a cigarette.",
         price: 9.99,
         image: "https://images.lookhuman.com/render/standard/ZRcyIEUB89ifE0vUEODoOGaaq4TmYzpY/mug11oz-whi-z1-t-life-is-relentless.jpg"
     },
     {
-        name: "Phone Jail",
-        description: "Stop spending hours on your phone when you know dang well that you should be working. Put that habit in the clinker.",
-        price: 14.99,
-        image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTSoWrnU_-8Ux968-uVdnooGWDGeaUpnNxUkDkAHZ7UvCCYhkcQ4HmA0kjv9esvWCRt_mt6EcOI4GKYfDsy765lFd4BEw&usqp=CAc"
+        name: "Chinese Evergreen",
+        description: "Make your co-workers think you are a plant expert with this easy-to-care-for plant in your BlueJeans background!",
+        price: 49.99,
+        image: "https://www.gardendesign.com/pictures/images/900x705Max/site_3/chinese-evergreen-plant-aglaonema-shutterstock-com_15962.jpg"
     },
     {
-        name: "Slippers",
-        description: "The perfect pair of slippers for any sneaker-head. Crease-free guarantee.",
-        price: 39.99,
-        image: "https://i.etsystatic.com/11164402/r/il/ccc1f2/1629397642/il_fullxfull.1629397642_jclv.jpg"
-    },
-    {
-        name: "Travel Pillow",
-        description: "Feeling stressed? These hands will gently cradle your head in even the darkest of times. ",
-        price: 19.99,
-        image: "https://helios-i.mashable.com/imagery/articles/02WUr2DtnMyd3t0lantZCoJ/hero-image.fill.size_1248x702.v1623367267.jpg"
+        name: "Boston Stoker's Original Grogg",
+        description: "It's extra flavorful, so you can drink it black without hating your life! (Hint: It tastes even better in a fun mug!)",
+        price: 12.99,
+        image: "https://cdn11.bigcommerce.com/s-swnop9phre/images/stencil/1280x1280/products/411/1189/Original_Grogg__55198.1668179338.jpg?c=2"
     }])
     p "Created #{Product.count} Products"
