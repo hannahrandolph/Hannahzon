@@ -18,13 +18,13 @@ Product.destroy_all
         name: "Human-Sized Dog Bed",
         description: "You'll be taking over your pets bed in no time! Oh, how the tables have turned!",
         price: 104.99,
-        image: "https://cdn.shopify.com/s/files/1/0549/1638/2879/products/FunnyFuzzy_SuperLargeLuxurySleepDeeperHumanDogBed6_2760adce-74c4-4618-940e-611f78107054_720x.jpg?v=1668397760"
+        image: "https://images.ctfassets.net/cnu0m8re1exe/ZdgrckhYEWLgVpkDLmj4E/97898c6d045f5a7e0e5c491d6fad2dea/LOOPAN_Human_Dog_Bed.jpg"
     },
     {
         name: "Hydration Pack",
         description: "When you want to be hands free but can't stand the thought of being away from your waterbottle.",
         price: 54.99,
-        image: "https://www.osprey.com/images/product/hero/skimmerres16_s19_side_sapphireblue.jpg"
+        image: "https://www.osprey.com/media/catalog/product/cache/bdd72cdc4bced30f3cf62267d5fe3824/s/p/sportlite15_s22_side_nightjungleblue.jpg"
     },        
     {
           name: "Coffee Mug",
@@ -34,7 +34,7 @@ Product.destroy_all
     },
     {
         name: "Chinese Evergreen",
-        description: "Make your co-workers think you are a plant expert with this easy-to-care-for plant in your BlueJeans background!",
+        description: "Make your co-workers think you are a plant expert with this easy-to-care-for plant in your Teams background!",
         price: 49.99,
         image: "https://www.gardendesign.com/pictures/images/900x705Max/site_3/chinese-evergreen-plant-aglaonema-shutterstock-com_15962.jpg"
     },

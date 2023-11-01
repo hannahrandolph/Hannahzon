@@ -2,14 +2,14 @@
 
 <h1 class = "center">Products</h1><br>
 
-<div class="d-flex justify-content-sm-around">
+<div class="d-flex ">
  <% @products.each_slice(3) do |product| %>
-<div class="container-xs">
-  <div class="row">
+<div class="container-fluid">
+  <div class="row justify-content-around">
  
- <div class = "col-xs">
+ <div class = "col-5">
 
-  
+ 
    <%= render product %>
  </div>
   </div>
